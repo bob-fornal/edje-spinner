@@ -6,6 +6,8 @@ class EdjeSpinner extends HTMLElement {
   type = 'eddie';
   size = 'normal'
 
+  shadowRoot;
+
   constructor() {
     super();
   }
@@ -16,8 +18,9 @@ class EdjeSpinner extends HTMLElement {
 
   connectedCallback() {
     if (this.rendered === false) {
+      this.shadowRoot = this.attachShadow({ mode: 'open' });
       this.render();
-      this.rendered = true;
+      this.rendered = true;  
     }
   }
 
@@ -43,15 +46,18 @@ class EdjeSpinner extends HTMLElement {
   }
 
   render() {
+    if (this.shadowRoot === undefined) return;
+
     if (this.debug === true) {
-      console.log('[edje-spinner] active', this.active, typeof this.active);
+      console.log('[edje-spinner] active', this.active);
     }
+
     if (this.active === false) {
-      this.innerHTML = ``;
+      this.shadowRoot.innerHTML = ``;
       return;
     }
     
-    this.innerHTML = `
+    this.shadowRoot.innerHTML = `
       ${this._renderStyle()}
       <div id="edje-spinner-container">
         <div id="edje-spinner" class="loading">
