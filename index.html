@@ -9,6 +9,17 @@
     <script type="module" src="./edje-spinner.js"></script>
   </head>
   <body>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum iaculis eros eu accumsan. Quisque non nisi lacus. Fusce egestas magna sed augue condimentum blandit sit amet ut odio. Donec in nisi vitae arcu placerat placerat eget id magna. Vivamus fringilla blandit arcu, quis bibendum ante volutpat in. Etiam eu ipsum turpis. Phasellus tellus nisl, consequat sit amet erat ut, ornare mollis nulla.</p>
+
+      <p>Suspendisse potenti. Quisque in nunc lacinia, tincidunt massa tincidunt, maximus magna. Nunc imperdiet tortor ac magna tempus convallis. Praesent accumsan augue enim, a gravida nulla blandit et. Maecenas convallis mi metus, sed malesuada augue ornare auctor. Proin eu leo bibendum, faucibus est sed, vulputate nisi. Quisque mollis dignissim ex, et porttitor leo congue faucibus.</p>
+
+      <p>Curabitur vulputate arcu a faucibus eleifend. Etiam non ex vel nisi ultrices venenatis. Ut ipsum metus, placerat eu mi eu, feugiat tempor leo. Fusce id porta massa. Aenean quis porta ipsum, vel interdum arcu. Maecenas vel placerat magna. Suspendisse suscipit gravida enim sed semper.</p>
+
+      <p>Vivamus sed egestas nisi. Nunc eu elementum mauris. Integer sit amet tellus sed massa consequat aliquet vitae in mi. Phasellus tristique nibh sed venenatis aliquet. Pellentesque vel ex at ex consectetur viverra ac eu purus. Aliquam maximus arcu at ex ultrices, eleifend pretium sem convallis. Curabitur finibus, magna a congue facilisis, ante nulla interdum turpis, nec ultrices nunc metus ac risus. Nulla nulla nunc, scelerisque eu pulvinar sit amet, finibus ut est. Suspendisse eleifend aliquet tincidunt. Phasellus ultrices mollis massa sit amet finibus. Phasellus ut consectetur tortor. Aenean nec quam nisl. Donec scelerisque risus a dolor accumsan bibendum. Praesent laoreet a neque ac tristique. Aenean et mauris ipsum.</p>
+
+      <p>Phasellus placerat urna non condimentum mattis. Aliquam facilisis volutpat lectus et ornare. Quisque consequat venenatis neque vitae facilisis. Nulla finibus risus nec leo cursus, at ullamcorper massa venenatis. Cras tellus dui, efficitur a ante vel, porta volutpat orci. Praesent arcu quam, molestie sit amet nunc lacinia, aliquam convallis tortor. Curabitur auctor, sapien eu condimentum dictum, lorem lacus pretium nulla, ut consectetur felis ante et eros. Sed mattis tortor enim, a tempus arcu aliquam vitae. Phasellus tempor ipsum et nibh auctor efficitur et porta tellus.</p>
+    </div>
     <edje-spinner id="spinner" debug="true" active="true"></edje-spinner>
 
     <div style="z-index: 200000; position: fixed; bottom: 1em;">
@@ -50,17 +61,17 @@
       </script>
 
 
-<button id="edje-le">EDJE LE</button>
-<script>
-  setTimeout(() => {
-    const eddieButton = document.getElementById('edje-le');
-    const spinner = document.getElementById('spinner');
+      <button id="edje-le">EDJE LE</button>
+      <script>
+        setTimeout(() => {
+          const eddieButton = document.getElementById('edje-le');
+          const spinner = document.getElementById('spinner');
 
-    eddieButton.addEventListener('click', () => {
-      spinner.setAttribute('type', 'edje-le');
-    });
-  }, 1000);
-</script>
+          eddieButton.addEventListener('click', () => {
+            spinner.setAttribute('type', 'edje-le');
+          });
+        }, 1000);
+      </script>
 
     </div>
   </body>
