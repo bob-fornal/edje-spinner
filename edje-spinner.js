@@ -1,5 +1,6 @@
 import eddieJs from './images/eddie.js';
 import eddieSilver from './images/eddie-silver.js';
+import le from './images/le.js';
 
 class EdjeSpinner extends HTMLElement {
   rendered = false;
@@ -99,6 +100,8 @@ class EdjeSpinner extends HTMLElement {
         return eddieJs;
       case 'eddie-silver':
         return eddieSilver;
+      case 'le':
+        return le;
     }
   };
 
@@ -106,7 +109,6 @@ class EdjeSpinner extends HTMLElement {
     return `
     <style>
       #edje-spinner-container {
-        background-color: rgba(0, 0, 0, 0.75);
         position: fixed;
         top: 0;
         right: 0;
@@ -124,7 +126,7 @@ class EdjeSpinner extends HTMLElement {
         width: 450px;
       }
       .round-image {
-        width: 350px;
+        width: 250px;
       }
 
       #edje-spinner.loading {
@@ -160,9 +162,9 @@ class EdjeSpinner extends HTMLElement {
         font-size: 10px;
         text-indent: -9999em;
         border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-right: 1.1em solid palegreen;
-        border-bottom: 1.1em solid palegreen;
-        border-left: 1.1em solid palegreen;
+        border-right: 1.1em solid #97C93F;
+        border-bottom: 1.1em solid #97C93F;
+        border-left: 1.1em solid #97C93F;
         -webkit-transform: translateZ(0);
         -ms-transform: translateZ(0);
         transform: translateZ(0);

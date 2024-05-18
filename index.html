@@ -60,6 +60,18 @@
         }, 1000);
       </script>
 
+      <button id="le">LE</button>
+      <script>
+        setTimeout(() => {
+          const eddieButton = document.getElementById('le');
+          const spinner = document.getElementById('spinner');
+
+          eddieButton.addEventListener('click', () => {
+            spinner.setAttribute('type', 'le');
+          });
+        }, 1000);
+      </script>
+
       <button id="normal">Normal</button>
       <script>
         setTimeout(() => {
