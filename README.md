@@ -2,6 +2,8 @@
  
 The concept is to have a series of spinners for Leading EDJE, built into one platform.
 
+![Demo Image](./images/DEMO-01.png)
+
 ## Attributes
 
 | Attribute | Description | Values (DEFAULT) |
