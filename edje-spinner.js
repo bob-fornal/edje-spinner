@@ -109,6 +109,7 @@ class EdjeSpinner extends HTMLElement {
     return `
     <style>
       #edje-spinner-container {
+        background-color: rgba(0, 0, 0, 0.1);
         position: fixed;
         top: 0;
         right: 0;
