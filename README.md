@@ -14,7 +14,7 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 | size | T-shirt Sizes | (normal) |
 | display | Display Options | (normal), round |
 
-## Future
+## Task List
 
 - [x] Web Component (JavaScript ONLY)
 - [x] Accept Attribute Changes
