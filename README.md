@@ -4,6 +4,14 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ![Demo Image](./images/DEMO-01.png)
 
+## Installation Notes
+
+(TODO)
+
+## Usage Notes
+
+(TODO)
+
 ## Attributes
 
 | Attribute | Description | Values (DEFAULT) |
@@ -26,3 +34,5 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 - [ ] Allow change of background
 - [ ] Test and Angular Install
 - [ ] Test and React Install
+- [ ] Installation Notes
+- [ ] Usage Notes
