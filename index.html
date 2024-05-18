@@ -20,7 +20,7 @@
 
       <p>Phasellus placerat urna non condimentum mattis. Aliquam facilisis volutpat lectus et ornare. Quisque consequat venenatis neque vitae facilisis. Nulla finibus risus nec leo cursus, at ullamcorper massa venenatis. Cras tellus dui, efficitur a ante vel, porta volutpat orci. Praesent arcu quam, molestie sit amet nunc lacinia, aliquam convallis tortor. Curabitur auctor, sapien eu condimentum dictum, lorem lacus pretium nulla, ut consectetur felis ante et eros. Sed mattis tortor enim, a tempus arcu aliquam vitae. Phasellus tempor ipsum et nibh auctor efficitur et porta tellus.</p>
     </div>
-    <edje-spinner id="spinner" debug="true" active="true"></edje-spinner>
+    <edje-spinner id="spinner" debug="true" active="true" type="eddie" display="normal"></edje-spinner>
 
     <div style="z-index: 200000; position: fixed; bottom: 1em;">
       <button id="toggle">Toggle</button>
@@ -60,16 +60,29 @@
         }, 1000);
       </script>
 
-
-      <button id="edje-le">EDJE LE</button>
+      <button id="normal">Normal</button>
       <script>
         setTimeout(() => {
-          const eddieButton = document.getElementById('edje-le');
+          const eddieButton = document.getElementById('normal');
           const spinner = document.getElementById('spinner');
 
           eddieButton.addEventListener('click', () => {
-            spinner.setAttribute('type', 'edje-le');
+            spinner.setAttribute('display', 'normal');
           });
+        }, 1000);
+      </script>
+
+      <button id="round">Round</button>
+      <script>
+        setTimeout(() => {
+          const eddieButton = document.getElementById('round');
+          const spinner = document.getElementById('spinner');
+
+          eddieButton.addEventListener('click', () => {
+            spinner.setAttribute('display', 'round');
+            console.log(spinner);
+          });
+          console.log('round');
         }, 1000);
       </script>
 

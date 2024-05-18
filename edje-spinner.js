@@ -6,8 +6,10 @@ class EdjeSpinner extends HTMLElement {
 
   active = false;
   debug = false;
-  type = 'eddie';
-  size = 'normal'
+
+  type = 'eddie'; // eddie, eddie-silver
+  size = 'normal'; // normal
+  display = 'normal'; // normal, round
 
   shadowRoot;
 
@@ -16,7 +18,7 @@ class EdjeSpinner extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['active', 'debug', 'type', 'size'];
+    return ['active', 'debug', 'display', 'type', 'size'];
   }
 
   connectedCallback() {
@@ -37,6 +39,9 @@ class EdjeSpinner extends HTMLElement {
         break;
       case 'debug':
         this.debug = newValue === 'true';
+        break;
+      case 'display':
+        this.display = newValue.toLowerCase();
         break;
       case 'type':
         this.type = newValue.toLowerCase();
@@ -62,15 +67,33 @@ class EdjeSpinner extends HTMLElement {
     
     this.shadowRoot.innerHTML = `
       ${this._renderStyle()}
-      <div id="edje-spinner-container">
-        <div id="edje-spinner" class="loading">
-          ${this.getImage()}
-        </div>
-      </div>
+      ${this._getDisplay()}
     `;
   }
 
-  getImage = () => {
+  _getDisplay = () => {
+    switch (this.display) {
+      case 'normal':
+        return `
+          <div id="edje-spinner-container">
+            <div id="edje-spinner" class="loading">
+              ${this._getImage()}
+            </div>
+          </div>  
+        `;
+      case 'round':
+        return `
+          <div id="edje-spinner-container">
+            <div id="edje-round" class="round"></div>
+            <div id="edje-spinner">
+              ${this._getImage().replace('normal-image', 'round-image')}
+            </div>
+          </div>
+        `;
+      }
+  };
+
+  _getImage = () => {
     switch (this.type) {
       case 'eddie':
         return eddieJs;
@@ -100,6 +123,9 @@ class EdjeSpinner extends HTMLElement {
       .normal-image {
         width: 450px;
       }
+      .round-image {
+        width: 350px;
+      }
 
       #edje-spinner.loading {
         animation: 4s linear infinite edje-spinner-keyframes;
@@ -122,6 +148,50 @@ class EdjeSpinner extends HTMLElement {
           transform: scaleX(100%)
         }
       }
+
+      .round,
+      .round::after {
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+      }
+      .round {
+        position: absolute;
+        font-size: 10px;
+        text-indent: -9999em;
+        border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-right: 1.1em solid palegreen;
+        border-bottom: 1.1em solid palegreen;
+        border-left: 1.1em solid palegreen;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation: load-round 2s infinite linear;
+        animation: load-round 2s infinite linear;
+      }
+
+      @-webkit-keyframes load-round {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes load-round {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
     </style>
     `;
   }
