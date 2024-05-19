@@ -1,3 +1,4 @@
+import eddieGuitar from './images/eddie-guitar.js'
 import eddieJs from './images/eddie.js';
 import eddieSilver from './images/eddie-silver.js';
 import le from './images/le.js';
@@ -96,6 +97,8 @@ class EdjeSpinner extends HTMLElement {
 
   _getImage = () => {
     switch (this.type) {
+      case 'eddie-guitar':
+        return eddieGuitar;
       case 'eddie':
         return eddieJs;
       case 'eddie-silver':
@@ -124,10 +127,14 @@ class EdjeSpinner extends HTMLElement {
       }
 
       .normal-image {
-        width: 450px;
+        max-height: 450px;
+        max-width: 450px;
+        height: 450px;
       }
       .round-image {
-        width: 250px;
+        max-height: 250px;
+        max-width: 250px;
+        height: 450px;
       }
 
       #edje-spinner.loading {

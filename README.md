@@ -22,7 +22,7 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 |-----------|-------------|------------------|
 | active | Is active? | true, (false) |
 | debug | console.log | true, (false) |
-| type | Image Type | (eddie), eddie-silver, le |
+| type | Image Type | (eddie), eddie-guitar, eddie-silver, le |
 | size | T-shirt Sizes | (normal) |
 | display | Display Options | (normal), round |
 
