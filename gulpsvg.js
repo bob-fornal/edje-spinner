@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const svgo = require('gulp-svgo');
+const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const modifyFile = require('gulp-modify-file');
 const log = require('fancy-log');
@@ -22,7 +22,7 @@ gulp.task('js', () => {
       const filename = _path.replace(file._base + '/', '');
       const start = files[filename];
       const end = '`;';
-      log(filename, start);
+      log(`--- ${filename}`);
 
       return `${start}${content}${end}`;
     }))
@@ -34,7 +34,7 @@ gulp.task('js', () => {
 
 gulp.task('svg', () => {
   return gulp.src('images/source/*')
-    .pipe(svgo())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('images/optimized'));
 });
 

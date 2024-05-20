@@ -12,11 +12,12 @@
   "dependencies": {
     "@web/dev-server": "^0.4.5",
     "fancy-log": "^2.0.0",
+    "grunt-minify-html": "^3.0.0",
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-modify-file": "^1.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2"
   }
 }

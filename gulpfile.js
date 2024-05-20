@@ -4,7 +4,7 @@ const concat = require('gulp-concat');
 
 function defaultTask(cb) {
   return src([
-    'images/*.js',
+    'images/build/*.js',
     'edje-spinner.js',
   ])
     .pipe(concat('edje-spinner.min.js'))
