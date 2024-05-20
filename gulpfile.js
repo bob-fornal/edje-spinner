@@ -9,7 +9,7 @@ const uglify = require('gulp-uglify');
 
 const log = require('fancy-log');
 
-require('./edje-spinner.config.js');
+require('./config.js');
 
 gulp.task('javascript', () => {
   return gulp.src('images/optimized/*.svg')
@@ -36,7 +36,7 @@ gulp.task('svg', () => {
 
 gulp.task('build', () => {
   return src([
-    'edje-spinner.config.js',
+    'config.js',
     'images/build/*.js',
     'edje-spinner.js',
   ])
