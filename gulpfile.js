@@ -14,6 +14,7 @@ const files = {
   'eddie-green-beret.svg': 'const eddieGreenBeret = `',
   'eddie-guitar.svg': 'const eddieGuitar = `',
   'eddie-knight.svg': 'const eddieKnight = `',
+  'eddie-leprechaun.svg': 'const eddieLeprechaun = `',
   'eddie-mandalorian.svg': 'const eddieMandalorian = `',
   'eddie-silver.svg': 'const eddieSilver = `',
   'eddie.svg': 'const eddie = `',

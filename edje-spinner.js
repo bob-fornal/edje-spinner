@@ -97,6 +97,7 @@ class EdjeSpinner extends HTMLElement {
     'eddie-green-beret': eddieGreenBeret,
     'eddie-guitar': eddieGuitar,
     'eddie-knight': eddieKnight,
+    'eddie-leprechaun': eddieLeprechaun,
     'eddie-mandalorian': eddieMandalorian,
     'eddie-silver': eddieSilver,
     'le': le
