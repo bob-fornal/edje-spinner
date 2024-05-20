@@ -44,8 +44,8 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [x] Display Options, Horizontal Spin or Round Spinner
 - [ ] T-shirt sizes
 - [ ] Accept another image
-- [ ] Allow change of "round" color
-- [ ] Allow change of background
+- [ ] Allow change of "round" border and background colors
+- [ ] Allow change of background (whole screen)
 - [ ] Test and Angular Install
 - [ ] Test and React Install
 - [x] Installation Notes
