@@ -1,11 +1,11 @@
 const { src, dest } = require('gulp');
 const gulp = require('gulp');
 
-const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
-const rename = require('gulp-rename');
 const modifyFile = require('gulp-modify-file');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 
 const log = require('fancy-log');
 
