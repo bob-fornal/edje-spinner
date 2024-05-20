@@ -1,5 +1,4 @@
 
-const eddie = `
 <svg
   class="normal-image"
   version="1.1"
@@ -3573,4 +3572,3 @@ const eddie = `
     </g>
   </g>
 </svg>
-`;

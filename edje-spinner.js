@@ -1,11 +1,3 @@
-import eddieGolf from './images/eddie-golf.js';
-import eddieGreenBeret from './images/eddie-green-beret.js';
-import eddieGuitar from './images/eddie-guitar.js'
-import eddieKnight from './images/eddie-knight.js';
-import eddieJs from './images/eddie.js';
-import eddieMandalorian from './images/eddie-mandalorian.js';
-import eddieSilver from './images/eddie-silver.js';
-import le from './images/le.js';
 
 class EdjeSpinner extends HTMLElement {
   rendered = false;
@@ -100,11 +92,7 @@ class EdjeSpinner extends HTMLElement {
   };
 
   images = {
-    ORDER: [
-      'eddie', 'eddie-golf', 'eddie-green-beret', 'eddie-guitar',
-      'eddie-knight', 'eddie-mandalorian', 'eddie-silver', 'le'
-    ],
-    'eddie': eddieJs,
+    'eddie': eddie,
     'eddie-golf': eddieGolf,
     'eddie-green-beret': eddieGreenBeret,
     'eddie-guitar': eddieGuitar,

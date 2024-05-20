@@ -1,5 +1,4 @@
 
-const eddieGolf = `
 <svg class="normal-image" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://svgstorm.com"
 viewBox = "0 0 856 994"
 width="856"
@@ -24537,4 +24536,3 @@ C 495.59 978.08 511.25 974.85 521.00 973.00
 C 509.54 974.11 497.79 974.00 486.00 974.00 Z"/>
 </g>
 </svg>
-`;

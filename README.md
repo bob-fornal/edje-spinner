@@ -14,7 +14,21 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ## Usage Notes
 
-(TODO)
+### Build Minified File
+
+```script
+> npm install
+> gulp
+> npm run start
+```
+
+### Optimize Images
+
+> **NO NOT USE** - This code is not working currently.
+
+```script
+> gulp -f gulpsvg.js
+```
 
 ## Attributes
 

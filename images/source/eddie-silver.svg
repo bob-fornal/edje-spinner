@@ -1,5 +1,4 @@
 
-const eddieSilver = `
 <svg class="normal-image" version="1.1" x="0px" y="0px" viewBox="0 0 350 350" xml:space="preserve" width="350" height="350" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
   <style type="text/css" id="style1">
     .st18 {
@@ -764,4 +763,3 @@ const eddieSilver = `
     </g>
   </g>
 </svg>
-`;
