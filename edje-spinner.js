@@ -82,10 +82,10 @@ class EdjeSpinner extends HTMLElement {
       case 'round':
         return `
           <div id="edje-spinner-container">
-            <div id="edje-round" class="round"></div>
-            <div id="edje-spinner">
+            <div id="edje-spinner" class="background">
               ${this._getImage().replace('normal-image', 'round-image')}
             </div>
+            <div id="edje-round" class="round"></div>
           </div>
         `;
       }
@@ -136,6 +136,9 @@ class EdjeSpinner extends HTMLElement {
       #edje-spinner.loading {
         animation: 4s linear infinite edje-spinner-keyframes;
       }
+      #edje-spinner.background {
+        z-index: 1;
+      }
 
       @keyframes edje-spinner-keyframes {
         0% {
@@ -162,6 +165,7 @@ class EdjeSpinner extends HTMLElement {
         height: 400px;
       }
       .round {
+        background-color: rgba(255, 255, 255, 0.5);
         position: absolute;
         font-size: 10px;
         text-indent: -9999em;
