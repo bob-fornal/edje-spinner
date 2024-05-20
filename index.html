@@ -7,6 +7,7 @@
     <title>EDJE Spinner Demo</title>
 
     <script type="module" src="./dist/edje-spinner.min.js"></script>
+    <script type="module" src="./edje-spinner.config.js"></script>
   </head>
   <body>
     <div class="content">
@@ -69,17 +70,14 @@
       <span id="types"></span>
       <script>
         setTimeout(() => {
-          const types = [
-            'eddie', 'eddie-golf', 'eddie-green-beret', 'eddie-guitar',
-            'eddie-knight', 'eddie-leprechaun', 'eddie-mandalorian', 'eddie-silver', 'le'
-          ];
+          const types = Object.keys(globalThis.config);
           const typesElement = document.getElementById('types');
           const spinner = document.getElementById('spinner');
 
           for (let type of types) {
             const item = document.createElement('button');
-            item.id = type;
-            item.innerText = type;
+            item.id = globalThis.config[type].key;
+            item.innerText = globalThis.config[type].title;
             item.style = 'margin-right: 0.5em;'
             item.addEventListener('click', () => {
               spinner.setAttribute('type', type);

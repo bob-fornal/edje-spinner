@@ -91,19 +91,7 @@ class EdjeSpinner extends HTMLElement {
       }
   };
 
-  images = {
-    'eddie': eddie,
-    'eddie-golf': eddieGolf,
-    'eddie-green-beret': eddieGreenBeret,
-    'eddie-guitar': eddieGuitar,
-    'eddie-knight': eddieKnight,
-    'eddie-leprechaun': eddieLeprechaun,
-    'eddie-mandalorian': eddieMandalorian,
-    'eddie-silver': eddieSilver,
-    'le': le
-  };
-
-  _getImage = () => this.images[this.type];
+  _getImage = () => globalThis[globalThis.config[this.type].global];
 
   _renderStyle() {
     return `

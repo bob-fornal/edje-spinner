@@ -9,24 +9,14 @@ const uglify = require('gulp-uglify');
 
 const log = require('fancy-log');
 
-const files = {
-  'eddie-golf.svg': 'const eddieGolf = `',
-  'eddie-green-beret.svg': 'const eddieGreenBeret = `',
-  'eddie-guitar.svg': 'const eddieGuitar = `',
-  'eddie-knight.svg': 'const eddieKnight = `',
-  'eddie-leprechaun.svg': 'const eddieLeprechaun = `',
-  'eddie-mandalorian.svg': 'const eddieMandalorian = `',
-  'eddie-silver.svg': 'const eddieSilver = `',
-  'eddie.svg': 'const eddie = `',
-  'le.svg': 'const le = `',
-};
+require('./edje-spinner.config.js');
 
 gulp.task('javascript', () => {
   return gulp.src('images/optimized/*.svg')
     .pipe(modifyFile((content, path, file) => {
       const _path = file.history[0];
-      const filename = _path.replace(file._base + '/', '');
-      const start = files[filename];
+      const filename = _path.replace(file._base + '/', '').replace('.svg', '');
+      const start = globalThis.config[filename].start;
       const end = '`;';
       log(`--- ${filename}`);
 
@@ -46,6 +36,7 @@ gulp.task('svg', () => {
 
 gulp.task('build', () => {
   return src([
+    'edje-spinner.config.js',
     'images/build/*.js',
     'edje-spinner.js',
   ])
