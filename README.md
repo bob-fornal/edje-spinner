@@ -16,15 +16,9 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ## Usage Notes
 
-Optimize the images, then run the Minified file to serve the code correctly.
-
-### Optimize Images
+The images are optimized and converted to JavaScript for incorporation. Then the Minified code is generate.
 
 This script generates a `/optimized` and `/build` set of SVG and JavaScript code, based on `/source` SVG images.
-
-```script
-> gulp -f gulpsvg.js
-```
 
 ### Build Minified File
 
@@ -54,5 +48,6 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [ ] Allow change of background
 - [ ] Test and Angular Install
 - [ ] Test and React Install
-- [ ] Installation Notes
-- [ ] Usage Notes
+- [x] Installation Notes
+- [x] Usage Notes
+- [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
