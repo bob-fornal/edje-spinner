@@ -22,7 +22,7 @@
     </div>
     <edje-spinner id="spinner" debug="true" active="true" type="eddie" display="normal"></edje-spinner>
 
-    <div style="z-index: 200000; position: fixed; bottom: 1em;">
+    <div style="z-index: 200000; position: fixed; bottom: 2em; left: 2em;">
       <button id="toggle">Toggle</button>
       <script>
         setTimeout(() => {
@@ -36,53 +36,7 @@
         }, 1000);
       </script>
 
-      <button id="eddie">Eddie</button>
-      <script>
-        setTimeout(() => {
-          const eddieButton = document.getElementById('eddie');
-          const spinner = document.getElementById('spinner');
-
-          eddieButton.addEventListener('click', () => {
-            spinner.setAttribute('type', 'eddie');
-          });
-        }, 1000);
-      </script>
-
-      <button id="eddie-guitar">Eddie Guitar</button>
-      <script>
-        setTimeout(() => {
-          const eddieButton = document.getElementById('eddie-guitar');
-          const spinner = document.getElementById('spinner');
-
-          eddieButton.addEventListener('click', () => {
-            spinner.setAttribute('type', 'eddie-guitar');
-          });
-        }, 1000);
-      </script>
-
-      <button id="eddie-silver">Eddie Silver</button>
-      <script>
-        setTimeout(() => {
-          const eddieButton = document.getElementById('eddie-silver');
-          const spinner = document.getElementById('spinner');
-
-          eddieButton.addEventListener('click', () => {
-            spinner.setAttribute('type', 'eddie-silver');
-          });
-        }, 1000);
-      </script>
-
-      <button id="le">LE</button>
-      <script>
-        setTimeout(() => {
-          const eddieButton = document.getElementById('le');
-          const spinner = document.getElementById('spinner');
-
-          eddieButton.addEventListener('click', () => {
-            spinner.setAttribute('type', 'le');
-          });
-        }, 1000);
-      </script>
+      <span>|</span>
 
       <button id="normal">Normal</button>
       <script>
@@ -110,6 +64,31 @@
         }, 1000);
       </script>
 
+      <span>|</span>
+
+      <span id="types"></span>
+      <script>
+        setTimeout(() => {
+          const types = [
+            'eddie', 'eddie-golf', 'eddie-green-beret', 'eddie-guitar',
+            'eddie-knight', 'eddie-mandalorian', 'eddie-silver', 'le'
+          ];
+          const typesElement = document.getElementById('types');
+          const spinner = document.getElementById('spinner');
+
+          for (let type of types) {
+            const item = document.createElement('button');
+            item.id = type;
+            item.innerText = type;
+            item.style = 'margin-right: 0.5em;'
+            item.addEventListener('click', () => {
+              spinner.setAttribute('type', type);
+              console.log(type);
+            });
+            typesElement.append(item);
+          }
+        }, 1000);
+      </script>
     </div>
   </body>
 </html>
