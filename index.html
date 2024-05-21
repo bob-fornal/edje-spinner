@@ -87,10 +87,44 @@
             item.style = 'margin-right: 0.5em;'
             item.addEventListener('click', () => {
               spinnerConfig.type = type;
+              if (spinnerConfig.hasOwnProperty('path')) {
+                delete spinnerConfig.path;
+              }
               spinner.setAttribute('config', JSON.stringify(spinnerConfig));
-              console.log(type);
             });
             typesElement.append(item);
+          }
+        }, 1000);
+      </script>
+
+      <span>|</span>
+
+      <span id="external"></span>
+      <script>
+        setTimeout(() => {
+          const external = [
+            { key: 'eddie-golf', title: 'External: Golf', path: './images/addin/eddie-golf.svg' },
+            { key: 'eddie-green-beret', title: 'External: Green Beret', path: './images/addin/eddie-green-beret.svg' },
+            { key: 'eddie-guitar', title: 'External: Guitar', path: './images/addin/eddie-guitar.svg' },
+            { key: 'eddie-knight', title: 'External: Knight', path: './images/addin/eddie-knight.svg' },
+            { key: 'eddie-leprechaun', title: 'External: Leprechaun', path: './images/addin/eddie-leprechaun.svg' },
+            { key: 'eddie-mandalorian', title: 'External: Mandalorian', path: './images/addin/eddie-mandalorian.svg' },
+            { key: 'eddie-silver', title: 'External: Silver', path: './images/addin/eddie-silver.svg' },
+          ];
+          const externalElement = document.getElementById('external');
+          const spinner = document.getElementById('spinner');
+
+          for (let attr of external) {
+            const item = document.createElement('button');
+            item.id = attr.key;
+            item.innerText = attr.title;
+            item.style = 'margin-right: 0.5em;'
+            item.addEventListener('click', () => {
+              spinnerConfig.type = 'external';
+              spinnerConfig.path = attr.path;
+              spinner.setAttribute('config', JSON.stringify(spinnerConfig));
+            });
+            externalElement.append(item);
           }
         }, 1000);
       </script>

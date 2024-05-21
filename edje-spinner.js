@@ -94,7 +94,12 @@ class EdjeSpinner extends HTMLElement {
       }
   };
 
-  _getImage = () => globalThis[globalThis.config[this.attributeConfig.type].global];
+  _getImage = () => {
+    if (this.attributeConfig.type === 'external') {
+      return `<img class="normal-image" src="${this.attributeConfig.path}" alt="external image" />`;
+    }
+    return globalThis[globalThis.config[this.attributeConfig.type].global];
+  }
 
   _renderStyle() {
     return `

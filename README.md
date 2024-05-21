@@ -68,3 +68,10 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [ ] Accept another image
 - [ ] Allow change of "round" border and background colors
 - [ ] Allow change of background (whole screen)
+
+## Reference
+
+These are sites I've been using ...
+
+* [PNG to SVG Converted](https://svgconverter.app/free)
+* [SVG Sanitizer / Validation](https://svg.enshrined.co.uk/)
