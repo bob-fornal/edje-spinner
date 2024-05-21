@@ -15,7 +15,7 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 (UNTESTED)
 
 ```script
-> npm i https://github.com/user_name/node_project_name
+> npm i https://github.com/bob-fornal/edje-spinner
 ```
 
 ### Development
