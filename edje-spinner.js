@@ -5,9 +5,11 @@ class EdjeSpinner extends HTMLElement {
   active = false;
   debug = false;
 
-  display = 'normal'; // normal, round
-  type = 'eddie'; // eddie, eddie-silver
-  size = 'normal'; // normal
+  attributeConfig = {
+    display: 'normal',
+    type: 'eddie',
+    size: 'normal',
+  };
 
   shadowRoot;
 
@@ -16,7 +18,7 @@ class EdjeSpinner extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['active', 'debug', 'config']; // 'display', 'type', 'size'];
+    return ['active', 'debug', 'config'];
   }
 
   connectedCallback() {
@@ -28,9 +30,16 @@ class EdjeSpinner extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (this.debug === true) {
+    if (this.debug === true && name !== 'config') {
       console.log('[edje-spinner]', { name, oldValue, newValue });
+    } if (this.debug === true && name === 'config') {
+      console.log('[edje-spinner]', {
+        name,
+        oldValue: JSON.parse(oldValue === null ? '{}' : oldValue),
+        newValue: JSON.parse(newValue),
+      });
     }
+
     switch (name) {
       case 'active':
         this.active = newValue === 'true';
@@ -39,11 +48,7 @@ class EdjeSpinner extends HTMLElement {
         this.debug = newValue === 'true';
         break;
       case 'config':
-        const attrConfig = JSON.parse(newValue);
-
-        this.display = attrConfig.display.toLowerCase() || 'normal';
-        this.type = attrConfig.type.toLowerCase() || 'eddie';
-        this.size = attrConfig.size || 'normal';
+        this.attributeConfig = { ...this.attributeConfig, ...JSON.parse(newValue) };
         break;
     }
     this.render();
@@ -68,7 +73,7 @@ class EdjeSpinner extends HTMLElement {
   }
 
   _getDisplay = () => {
-    switch (this.display) {
+    switch (this.attributeConfig.display) {
       case 'normal':
         return `
           <div id="edje-spinner-container">
@@ -89,7 +94,7 @@ class EdjeSpinner extends HTMLElement {
       }
   };
 
-  _getImage = () => globalThis[globalThis.config[this.type].global];
+  _getImage = () => globalThis[globalThis.config[this.attributeConfig.type].global];
 
   _renderStyle() {
     return `
