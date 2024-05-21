@@ -46,9 +46,12 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 
 ### Configuration Options
 | Key | Description | Values (DEFAULT) |
-| type | Image Type | (eddie), eddie-guitar, eddie-silver, le |
-| size | T-shirt Sizes | (normal) |
+|-----|-------------|------------------|
 | display | Display Options | (normal), round |
+| size | T-shirt Sizes | (normal) |
+| type | Image Type | (eddie), le, \[external\] |
+| | external | Also use path |
+| path | Used with "external" | path to the file |
 
 ## Task List
 
@@ -64,8 +67,8 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 ### Configuration
 
 - [x] Display Options, Horizontal Spin or Round Spinner
+- [x] Accept an external image
 - [ ] T-shirt sizes
-- [ ] Accept another image
 - [ ] Allow change of "round" border and background colors
 - [ ] Allow change of background (whole screen)
 
