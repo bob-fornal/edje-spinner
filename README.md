@@ -26,6 +26,8 @@ Additionally, use the `[attr.---]` pattern to set the attributes for the `<edje-
 
 ![Angular HTML EDJE Spinner Web Component](./images/documentation/ANGULAR-02.png)
 
+> **REPOSITORY**: [Angular Repo](https://github.com/bob-fornal/edje-spinner-angular)
+
 #### React Implementation
 
 (coming)
