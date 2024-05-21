@@ -22,9 +22,13 @@ In the `angular.json` file, include the minified production script.
 
 ![Angular JSON File](./images/documentation/ANGULAR-01.png)
 
-Additionally, use the `[attr.---]` pattern to set the attributes for the `<edje-spinner>` Web Component.
+Use the `[attr.---]` pattern to set the attributes for the `<edje-spinner>` Web Component.
 
 ![Angular HTML EDJE Spinner Web Component](./images/documentation/ANGULAR-02.png)
+
+Additionally, the `[attr.config]` need to be stringified.
+
+![Angular Class Stringified Function](./images/documentation/ANGULAR-03.png)
 
 > **REPOSITORY**: [Angular Repo](https://github.com/bob-fornal/edje-spinner-angular)
 
