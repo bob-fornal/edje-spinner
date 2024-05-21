@@ -2,11 +2,11 @@
  
 The concept is to have a series of spinners for Leading EDJE, built into one platform.
 
-![Demo Image 1](./images/DEMO-01.png)
+![Demo Image 1](./documentation/images/DEMO-01.png)
 
-![Demo Image 2](./images/DEMO-02.png)
+![Demo Image 2](./documentation/images/DEMO-02.png)
 
-![Demo Image 3](./images/DEMO-03.png)
+![Demo Image 3](./documentation/images/DEMO-03.png)
 
 ## Installation Notes
 
@@ -18,7 +18,13 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 #### Angular Implementation
 
-(coming soon)
+In the `angular.json` file, include the minified production script.
+
+![Angular JSON File](./images/documentation/ANGULAR-01.png)
+
+Additionally, use the `[attr.---]` pattern to set the attributes for the `<edje-spinner>` Web Component.
+
+![Angular HTML EDJE Spinner Web Component](./images/documentation/ANGULAR-02.png)
 
 #### React Implementation
 
