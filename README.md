@@ -42,6 +42,10 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 |-----------|-------------|------------------|
 | active | Is active? | true, (false) |
 | debug | console.log | true, (false) |
+| config | Configuration Options | undefined |
+
+### Configuration Options
+| Key | Description | Values (DEFAULT) |
 | type | Image Type | (eddie), eddie-guitar, eddie-silver, le |
 | size | T-shirt Sizes | (normal) |
 | display | Display Options | (normal), round |
@@ -51,13 +55,16 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [x] Web Component (JavaScript ONLY)
 - [x] Accept Attribute Changes
 - [x] Images to SVG and Import
-- [x] Display Options, Horizontal Spin or Round Spinner
-- [ ] T-shirt sizes
-- [ ] Accept another image
-- [ ] Allow change of "round" border and background colors
-- [ ] Allow change of background (whole screen)
 - [ ] Test and Angular Install
 - [ ] Test and React Install
 - [x] Installation Notes
 - [x] Usage Notes
 - [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
+
+### Configuration
+
+- [x] Display Options, Horizontal Spin or Round Spinner
+- [ ] T-shirt sizes
+- [ ] Accept another image
+- [ ] Allow change of "round" border and background colors
+- [ ] Allow change of background (whole screen)

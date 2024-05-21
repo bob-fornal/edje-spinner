@@ -5,9 +5,9 @@ class EdjeSpinner extends HTMLElement {
   active = false;
   debug = false;
 
+  display = 'normal'; // normal, round
   type = 'eddie'; // eddie, eddie-silver
   size = 'normal'; // normal
-  display = 'normal'; // normal, round
 
   shadowRoot;
 
@@ -16,7 +16,7 @@ class EdjeSpinner extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['active', 'debug', 'display', 'type', 'size'];
+    return ['active', 'debug', 'config']; // 'display', 'type', 'size'];
   }
 
   connectedCallback() {
@@ -38,14 +38,12 @@ class EdjeSpinner extends HTMLElement {
       case 'debug':
         this.debug = newValue === 'true';
         break;
-      case 'display':
-        this.display = newValue.toLowerCase();
-        break;
-      case 'type':
-        this.type = newValue.toLowerCase();
-        break;
-      case 'size':
-        this.size = newValue;
+      case 'config':
+        const attrConfig = JSON.parse(newValue);
+
+        this.display = attrConfig.display.toLowerCase() || 'normal';
+        this.type = attrConfig.type.toLowerCase() || 'eddie';
+        this.size = attrConfig.size || 'normal';
         break;
     }
     this.render();
