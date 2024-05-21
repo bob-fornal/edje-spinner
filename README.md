@@ -20,6 +20,10 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 (coming soon)
 
+#### React Implementation
+
+(coming)
+
 ### Development
 
 ```script
