@@ -12,11 +12,13 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ### Node Modules
 
-(UNTESTED)
-
 ```script
-> npm i https://github.com/bob-fornal/edje-spinner
+> npm install https://github.com/bob-fornal/edje-spinner
 ```
+
+#### Angular Implementation
+
+(coming soon)
 
 ### Development
 
