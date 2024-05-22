@@ -68,7 +68,7 @@ gulp
 | Key | Description | Values (DEFAULT) |
 |-----|-------------|------------------|
 | display | Display Options | (normal), round |
-| size | T-shirt Sizes | (normal) |
+| size | T-shirt Sizes | extra-small, small, (medium), large, extra-large |
 | type | Image Type | (eddie), le, \[external\] |
 | | external | Also use path |
 | path | Used with "external" | path to the file |
@@ -89,7 +89,7 @@ gulp
 
 - [x] Display Options, Horizontal Spin or Round Spinner
 - [x] Accept an external image
-- [ ] T-shirt sizes
+- [x] T-shirt sizes
 - [ ] Allow change of "round" border and background colors
 - [ ] Allow change of background (whole screen)
 

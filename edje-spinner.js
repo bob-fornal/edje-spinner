@@ -8,7 +8,7 @@ class EdjeSpinner extends HTMLElement {
   attributeConfig = {
     display: 'normal',
     type: 'eddie',
-    size: 'normal',
+    size: 'medium',
   };
 
   shadowRoot;
@@ -78,7 +78,7 @@ class EdjeSpinner extends HTMLElement {
         return `
           <div part="container" id="edje-spinner--container">
             <div part="spinner-loading" id="edje-spinner">
-              ${this._getImage()}
+              ${this._getImage().replace('edje-spinner--normal-image', `edje-spinner--normal-image--${this.attributeConfig.size}-size`)}
             </div>
           </div>  
         `;
@@ -86,9 +86,9 @@ class EdjeSpinner extends HTMLElement {
         return `
           <div part="container" id="edje-spinner--container">
             <div part="spinner-background" id="edje-spinner"">
-              ${this._getImage().replace('edje-spinner--normal-image', 'edje-spinner--round-image')}
+              ${this._getImage().replace('edje-spinner--normal-image', `edje-spinner--round-image--${this.attributeConfig.size}-size`)}
             </div>
-            <div part="round" id="edje-spinner--edje-round" class="round"></div>
+            <div part="round--${this.attributeConfig.size}-size" id="edje-spinner--edje-round" class="round"></div>
           </div>
         `;
       }
