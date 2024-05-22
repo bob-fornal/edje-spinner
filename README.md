@@ -12,6 +12,8 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ### Node Modules
 
+To add the spinner to the `node_modules`, use the following command. If it is updated, this command will need re-run; `npm install` will not update this from the repository.
+
 ```script
 npm install https://github.com/bob-fornal/edje-spinner
 ```
