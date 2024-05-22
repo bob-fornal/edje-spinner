@@ -76,11 +76,12 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [x] Web Component (JavaScript ONLY)
 - [x] Accept Attribute Changes
 - [x] Images to SVG and Import
-- [ ] Test and Angular Install
+- [x] Test and Angular Install
 - [ ] Test and React Install
 - [x] Installation Notes
 - [x] Usage Notes
 - [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
+- [x] Externalize CSS for simpler design
 
 ### Configuration
 
