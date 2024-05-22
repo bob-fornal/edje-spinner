@@ -20,7 +20,7 @@ npm install https://github.com/bob-fornal/edje-spinner
 
 In the `angular.json` file, include the minified production script and CSS file.
 
-![Angular JSON File](./images/documentation/ANGULAR-01.png)
+![Angular JSON File](./images/documentation/ANGULAR-01a.png)
 
 Use the `[attr.---]` pattern to set the attributes for the `<edje-spinner>` Web Component.
 
