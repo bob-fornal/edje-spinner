@@ -45,8 +45,13 @@ gulp.task('build', () => {
     .pipe(dest('dist/'));
 });
 
+gulp.task('css', () => {
+  return src('edje-spinner.css')
+    .pipe(dest('dist/'));
+});
+
 function defaultTask(cb) {
-  gulp.series('svg', 'javascript', 'build')();
+  gulp.series('svg', 'javascript', 'build', 'css')();
   cb();
 }
 
