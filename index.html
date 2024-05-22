@@ -127,6 +127,37 @@
             }
           }, 1000);
         </script>
+
+        <span>|</span>
+
+        <button id="bg-normal">Background (normal)</button>
+        <script>
+          setTimeout(() => {
+            const eddieButton = document.getElementById('bg-normal');
+            const spinner = document.getElementById('spinner');
+
+            eddieButton.addEventListener('click', () => {
+              spinnerConfig.styleContainer = '';
+              spinnerConfig.styleBackground = '';
+              spinner.setAttribute('config', JSON.stringify(spinnerConfig));
+            });
+          }, 1000);
+        </script>
+
+        <button id="bg-adjust">Background (adjust)</button>
+        <script>
+          setTimeout(() => {
+            const eddieButton = document.getElementById('bg-adjust');
+            const spinner = document.getElementById('spinner');
+
+            eddieButton.addEventListener('click', () => {
+              spinnerConfig.styleContainer = 'background-color: rgba(100, 0, 0, 0.2) !important;';
+              spinnerConfig.styleBackground = 'background-color: rgba(255, 0, 0, 0.5) !important; border-top: 1.1em solid rgba(255, 255, 255, 0.2) !important; border-right: 1.1em solid red !important; border-bottom: 1.1em solid red !important; border-left: 1.1em solid red !important;';
+              spinner.setAttribute('config', JSON.stringify(spinnerConfig));
+            });
+          }, 1000);
+        </script>
+
       </div>
 
       <div class="row">

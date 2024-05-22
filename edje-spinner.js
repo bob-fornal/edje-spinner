@@ -76,19 +76,19 @@ class EdjeSpinner extends HTMLElement {
     switch (this.attributeConfig.display) {
       case 'normal':
         return `
-          <div part="container" id="edje-spinner--container">
+          <div part="container" id="edje-spinner--container"${this._getContainerStyle()}>
             <div part="spinner-loading" id="edje-spinner">
               ${this._getImage().replace('edje-spinner--normal-image', `edje-spinner--normal-image--${this.attributeConfig.size}-size`)}
             </div>
-          </div>  
+          </div>
         `;
       case 'round':
         return `
-          <div part="container" id="edje-spinner--container">
-            <div part="spinner-background" id="edje-spinner"">
+          <div part="container" id="edje-spinner--container"${this._getContainerStyle()}>
+            <div part="spinner-background" id="edje-spinner">
               ${this._getImage().replace('edje-spinner--normal-image', `edje-spinner--round-image--${this.attributeConfig.size}-size`)}
             </div>
-            <div part="round--${this.attributeConfig.size}-size" id="edje-spinner--edje-round" class="round"></div>
+            <div part="round--${this.attributeConfig.size}-size" id="edje-spinner--edje-round"${this._getBackgroundStyle()}></div>
           </div>
         `;
       }
@@ -100,6 +100,16 @@ class EdjeSpinner extends HTMLElement {
     }
     return globalThis[globalThis.config[this.attributeConfig.type].global];
   }
+
+  _getContainerStyle = () => {
+    if (this.attributeConfig.hasOwnProperty('styleContainer') === false) return '';
+    return ` style="${this.attributeConfig.styleContainer}"`;
+  };
+
+  _getBackgroundStyle = () => {
+    if (this.attributeConfig.hasOwnProperty('styleBackground') === false) return '';
+    return ` style="${this.attributeConfig.styleBackground}"`;
+  };
 
   _renderStyle() {
     return `

@@ -69,6 +69,8 @@ gulp
 |-----|-------------|------------------|
 | display | Display Options | (normal), round |
 | size | T-shirt Sizes | extra-small, small, (medium), large, extra-large |
+| styleBackground | style="" content for round border and background, use !important | background-color, border-right, border-bottom, border-left |
+| styleContainer | style="" content for whole screen background, use !important | background-color |
 | type | Image Type | (eddie), le, \[external\] |
 | | external | Also use path |
 | path | Used with "external" | path to the file |
@@ -90,8 +92,8 @@ gulp
 - [x] Display Options, Horizontal Spin or Round Spinner
 - [x] Accept an external image
 - [x] T-shirt sizes
-- [ ] Allow change of "round" border and background colors
-- [ ] Allow change of background (whole screen)
+- [x] Allow change of "round" border and background colors
+- [x] Allow change of background (whole screen)
 
 ## Reference
 
