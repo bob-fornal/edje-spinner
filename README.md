@@ -41,7 +41,7 @@ Additionally, the `[attr.config]` need to be stringified.
 ### Development
 
 ```script
-> npm install
+npm install
 ```
 
 ## Usage Notes
@@ -53,7 +53,7 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 ### Build Minified File
 
 ```script
-> gulp
+gulp
 ```
 
 ## Attributes
