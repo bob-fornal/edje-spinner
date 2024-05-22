@@ -18,7 +18,7 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 #### Angular Implementation
 
-In the `angular.json` file, include the minified production script.
+In the `angular.json` file, include the minified production script and CSS file.
 
 ![Angular JSON File](./images/documentation/ANGULAR-01.png)
 
