@@ -80,8 +80,9 @@ gulp
 - [x] Web Component (JavaScript ONLY)
 - [x] Accept Attribute Changes
 - [x] Images to SVG and Import
-- [x] Test and Angular Install
-- [ ] Test and React Install
+- [x] Test Angular Install
+- [ ] Test React Install
+- [ ] Test Vue Install
 - [x] Installation Notes
 - [x] Usage Notes
 - [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
