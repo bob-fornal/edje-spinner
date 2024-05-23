@@ -22,7 +22,7 @@ class EdjeSpinner extends HTMLElement {
     }
   }
 
-  _debug = true;
+  _debug = false;
   get debug() {
     if (this._debug === true || this._debug === 'true') {
       console.log('[edje-spinner] get debug', this.hasAttribute('debug'));
