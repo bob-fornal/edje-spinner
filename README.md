@@ -12,10 +12,30 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ### Node Modules
 
-To add the spinner to the `node_modules`, use the following command. If it is updated, this command will need re-run; `npm install` will not update this from the repository.
+To add the spinner to the `/node_modules`, use the following command.
 
 ```script
 npm install https://github.com/bob-fornal/edje-spinner
+```
+
+> If it is updated, this command will need re-run; `npm install` will not update this from the repository.
+
+### Development Notes
+
+This project is designed to run from the root of the repository.
+
+```script
+npm install
+```
+
+Once `npm install` is run, serve the index.html file to test the spinner.
+
+If changes are made to the `/images/source` files, the `config.js`, `edje-spinner.css`, or the `edje-spinner.js` ... the project will need to be rebuilt. The `index.html` file uses the compiled version in the `/dist` folder.
+
+### Build Minified File
+
+```script
+gulp
 ```
 
 ## Angular Implementation
@@ -36,7 +56,7 @@ Additionally, the `[attr.config]` need to be stringified.
 
 ## React Implementation
 
-First, set up the code to move the CSS and Javascript files from `node_modules` into the `public` folder.
+First, set up the code to move the CSS and Javascript files from `/node_modules` into the `/public` folder.
 
 ![Folder Structure](./images/documentation/REACT-01.png)
 
@@ -60,7 +80,7 @@ Since this project uses TypeScript, the following needs added to ensure the lint
 
 ## Vue Implementation
 
-First, set up the code to move the CSS and Javascript files from `node_modules` into the `src/assets` folder.
+First, set up the code to move the CSS and Javascript files from `/node_modules` into the `/src/assets` folder.
 
 ![Folder Structure](./images/documentation/VUE-01.png)
 
@@ -78,23 +98,11 @@ Here is implementation code ...
 
 > **REPOSITORY**: [Vue Repo](https://github.com/bob-fornal/edje-spinner-vue)
 
-## Development
-
-```script
-npm install
-```
-
 ## Usage Notes
 
-The images are optimized and converted to JavaScript for incorporation. Then the Minified code is generate.
+The images in `/source`are optimized and converted to JavaScript for incorporation. Then the Minified code is generate.
 
 This script generates a `/optimized` and `/build` set of SVG and JavaScript code, based on `/source` SVG images.
-
-### Build Minified File
-
-```script
-gulp
-```
 
 ## Attributes
 
@@ -122,11 +130,12 @@ gulp
 - [x] Images to SVG and Import
 - [x] Test Angular Install
 - [x] Test React Install
-- [ ] Test Vue Install
+- [x] Test Vue Install
 - [x] Installation Notes
 - [x] Usage Notes
 - [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
 - [x] Externalize CSS for simpler design
+- [x] Built in Attribute Reflection
 
 ### Configuration
 
