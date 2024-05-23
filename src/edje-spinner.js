@@ -85,7 +85,7 @@ class EdjeSpinner extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if ((this._debug === true || this._debug === 'true') && name !== 'config') {
       console.log('[edje-spinner] attr change', { name, oldValue, newValue });
-    } if ((this._debug === true || this._debug === 'true')&& name === 'config') {
+    } if ((this._debug === true || this._debug === 'true') && name === 'config') {
       console.log('[edje-spinner] attr change', {
         name,
         oldValue: JSON.parse(oldValue === null ? '{}' : oldValue),
@@ -93,19 +93,22 @@ class EdjeSpinner extends HTMLElement {
       });
     }
 
-    switch (name) {
-      case 'active':
-        this._active = newValue === 'true';
-        break;
-      case 'debug':
-        this._debug = newValue === 'true';
-        break;
-      case 'config':
-        this._attributeConfig = { ...this.attributeConfig, ...JSON.parse(newValue) };
-        break;
-    }
+    const handleName = name[0].toUpperCase() + name.substring(1);
+    this[`handle${handleName}`](newValue);
     this.render();
   }
+
+  handleActive = (value) => {
+    this._active = value === 'true';
+  };
+
+  handleDebug = (value) => {
+    this._debug = value === 'true';
+  };
+
+  handleConfig = (value) => {
+    this._attributeConfig = { ...this.attributeConfig, ...JSON.parse(value) };
+  };
 
   render() {
     if (this.shadowRoot === undefined) return;

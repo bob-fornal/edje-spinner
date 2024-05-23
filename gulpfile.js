@@ -5,11 +5,10 @@ const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
 const modifyFile = require('gulp-modify-file');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
 
 const log = require('fancy-log');
 
-require('./config.js');
+require('./src/config.js');
 
 gulp.task('javascript', () => {
   return gulp.src('images/optimized/*.svg')
@@ -36,16 +35,16 @@ gulp.task('svg', () => {
 
 gulp.task('build', () => {
   return src([
-    'config.js',
+    'src/config.js',
     'images/build/*.js',
-    'edje-spinner.js',
+    'src/edje-spinner.js',
   ])
     .pipe(concat('edje-spinner.min.js'))
     .pipe(dest('dist/'));
 });
 
 gulp.task('css', () => {
-  return src('edje-spinner.css')
+  return src('src/edje-spinner.css')
     .pipe(dest('dist/'));
 });
 
