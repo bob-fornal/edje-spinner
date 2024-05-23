@@ -41,7 +41,6 @@ gulp.task('build', () => {
     'edje-spinner.js',
   ])
     .pipe(concat('edje-spinner.min.js'))
-    // .pipe(uglify())
     .pipe(dest('dist/'));
 });
 
