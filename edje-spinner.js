@@ -57,19 +57,19 @@ class EdjeSpinner extends HTMLElement {
   render() {
     if (this.shadowRoot === undefined) return;
 
-    if (this.debug === true) {
+    if (this.debug === true || this.active === 'true') {
       console.log('[edje-spinner] active', this.active);
     }
 
-    if (this.active === false) {
+    if (this.active === false || this.active === 'false') {
       this.shadowRoot.innerHTML = ``;
       return;
     }
     
     this.shadowRoot.innerHTML = `
-    ${this._renderStyle()}
-    ${this._getDisplay()}
-  `;
+      ${this._renderStyle()}
+      ${this._getDisplay()}
+    `;
   }
 
   _getDisplay = () => {
