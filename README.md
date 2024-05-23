@@ -36,7 +36,27 @@ Additionally, the `[attr.config]` need to be stringified.
 
 #### React Implementation
 
-(coming)
+First, set up the code to move the CSS and Javascript files from `node_modules` into the `public` folder.
+
+![Folder Structure](./images/documentation/REACT-01.png)
+
+Import the CSS in the `_app.tsx` file.
+
+![_app.tsx](./images/documentation/REACT-02.png)
+
+Here you can see the JavaScript file loaded and the spinner component implemented in the `index.tsx` file.
+
+![index.tsx](./images/documentation/REACT-03.png)
+
+... here are the state settings for the "active" variable.
+
+![index.tsx](./images/documentation/REACT-04.png)
+
+Since this project uses TypeScript, the following needs added to ensure the linting doesn't complain.
+
+![index.tsx](./images/documentation/REACT-05.png)
+
+> **REPOSITORY**: [React Repo](https://github.com/bob-fornal/edje-spinner-react)
 
 ### Development
 
@@ -81,7 +101,7 @@ gulp
 - [x] Accept Attribute Changes
 - [x] Images to SVG and Import
 - [x] Test Angular Install
-- [ ] Test React Install
+- [x] Test React Install
 - [ ] Test Vue Install
 - [x] Installation Notes
 - [x] Usage Notes
