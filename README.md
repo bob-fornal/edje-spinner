@@ -18,7 +18,7 @@ To add the spinner to the `node_modules`, use the following command. If it is up
 npm install https://github.com/bob-fornal/edje-spinner
 ```
 
-#### Angular Implementation
+## Angular Implementation
 
 In the `angular.json` file, include the minified production script and CSS file.
 
@@ -34,7 +34,7 @@ Additionally, the `[attr.config]` need to be stringified.
 
 > **REPOSITORY**: [Angular Repo](https://github.com/bob-fornal/edje-spinner-angular)
 
-#### React Implementation
+## React Implementation
 
 First, set up the code to move the CSS and Javascript files from `node_modules` into the `public` folder.
 
@@ -58,7 +58,27 @@ Since this project uses TypeScript, the following needs added to ensure the lint
 
 > **REPOSITORY**: [React Repo](https://github.com/bob-fornal/edje-spinner-react)
 
-### Development
+## Vue Implementation
+
+First, set up the code to move the CSS and Javascript files from `node_modules` into the `src/assets` folder.
+
+![Folder Structure](./images/documentation/VUE-01.png)
+
+Configure Vue to recognize the spinner tag as a Custom Element in the `vite.config.js` file.
+
+![vite.config.js](./images/documentation/VUE-02.png)
+
+Import the CSS and JavaScript in the `main.js` file.
+
+![main.js](./images/documentation/VUE-03.png)
+
+Here is implementation code ...
+
+![App.vue](./images/documentation/VUE-04.png)
+
+> **REPOSITORY**: [Vue Repo](https://github.com/bob-fornal/edje-spinner-vue)
+
+## Development
 
 ```script
 npm install
