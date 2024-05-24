@@ -180,6 +180,12 @@ These are sites I've been using ...
 * [MDN: Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
 * [CSS Tricks: Styling a Web Component](https://css-tricks.com/styling-a-web-component/)
 
+### Go Make Things
+
+* [Web Component Lifecycle](https://gomakethings.com/the-web-component-lifecycle-methods/)
+* [Detect when Attributes Change on a Web Component](https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/)
+* [More Ways to Instantiate Web Components](https://gomakethings.com/more-ways-to-instantiate-web-components/)
+
 ### Images
 
 * [PNG to SVG Converted](https://svgconverter.app/free)
