@@ -119,9 +119,13 @@ Here is implementation code ...
 
 [Back to Top](#sections)
 
-The images in `/source`are optimized and converted to JavaScript for incorporation. Then the Minified code is generate.
+The images in `/source`are optimized and converted to JavaScript for incorporation.
 
 This script generates a `/optimized` and `/build` set of SVG and JavaScript code, based on `/source` SVG images.
+
+### Image Sizing
+
+The CSS sets the height, as most of the initial images used were narrow and tall. If your external image is short and wide, convert it to a square image and consider adjusting the padding to allow the image to display properly.
 
 ## Attributes
 
@@ -159,6 +163,7 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [x] Build Process (Gulp, SVG Optimization, Conversion, and Build)
 - [x] Externalize CSS for simpler design
 - [x] Built in Attribute Reflection
+- [ ] Unit Test Coverage
 
 ### Configuration
 

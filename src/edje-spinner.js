@@ -123,7 +123,7 @@ class EdjeSpinner extends HTMLElement {
     }
     
     this.shadowRoot.innerHTML = `
-      ${this._renderStyle()}
+      ${this._getStyle()}
       ${this._getDisplay()}
     `;
   }
@@ -167,7 +167,7 @@ class EdjeSpinner extends HTMLElement {
     return ` style="${this._attributeConfig.styleBackground}"`;
   };
 
-  _renderStyle() {
+  _getStyle() {
     return `
     <style>
       @keyframes edje-spinner-keyframes {
