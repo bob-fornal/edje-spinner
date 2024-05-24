@@ -2,11 +2,9 @@
  
 The concept is to have a series of spinners for Leading EDJE, built into one platform.
 
-![Demo Image 1](./images/documentation/DEMO-01.png)
+![Demo Image 1](./images/documentation/EDJE-SPINNER-01.png)
 
-![Demo Image 2](./images//documentation/DEMO-02.png)
-
-![Demo Image 3](./images//documentation/DEMO-03.png)
+![Demo Image 2](./images//documentation/EDJE-SPINNER.png)
 
 ## Installation Notes
 
