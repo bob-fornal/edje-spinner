@@ -1,4 +1,4 @@
-# edje-spinner
+# <edje-spinner>
  
 The concept is to have a series of spinners for Leading EDJE, built into one platform.
 
