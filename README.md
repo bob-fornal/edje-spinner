@@ -6,6 +6,17 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ![Demo Image 2](./images//documentation/EDJE-SPINNER-02.png)
 
+## Sections
+
+* [Installation Notes](#installation-notes)
+* [Angular Implementation](#angular-implementation)
+* [React Implementation](#react-implementation)
+* [Vue Implementation](#vue-implementation)
+* [Usage Notes](#usage-notes)
+* [Attributes](#attributes)
+* [Task List](#task-list)
+* [Reference](#reference)
+
 ## Installation Notes
 
 ### Node Modules
