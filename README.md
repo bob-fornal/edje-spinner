@@ -155,7 +155,8 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 - [x] Allow change of background (whole screen)
 
 ## Reference
-([Back to Top](#sections))
+
+[Back to Top](#sections)
 
 These are sites I've been using ...
 
