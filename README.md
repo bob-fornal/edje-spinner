@@ -19,6 +19,8 @@ The concept is to have a series of spinners for Leading EDJE, built into one pla
 
 ## Installation Notes
 
+[Back to Top](#sections)
+
 ### Node Modules
 
 To add the spinner to the `/node_modules`, use the following command.
@@ -49,6 +51,8 @@ gulp
 
 ## Angular Implementation
 
+[Back to Top](#sections)
+
 In the `angular.json` file, include the minified production script and CSS file.
 
 ![Angular JSON File](./images/documentation/ANGULAR-01a.png)
@@ -64,6 +68,8 @@ Additionally, the `[attr.config]` need to be stringified.
 > **REPOSITORY**: [Angular Repo](https://github.com/bob-fornal/edje-spinner-angular)
 
 ## React Implementation
+
+[Back to Top](#sections)
 
 First, set up the code to move the CSS and Javascript files from `/node_modules` into the `/public` folder.
 
@@ -89,6 +95,8 @@ Since this project uses TypeScript, the following needs added to ensure the lint
 
 ## Vue Implementation
 
+[Back to Top](#sections)
+
 First, set up the code to move the CSS and Javascript files from `/node_modules` into the `/src/assets` folder.
 
 ![Folder Structure](./images/documentation/VUE-01.png)
@@ -109,11 +117,15 @@ Here is implementation code ...
 
 ## Usage Notes
 
+[Back to Top](#sections)
+
 The images in `/source`are optimized and converted to JavaScript for incorporation. Then the Minified code is generate.
 
 This script generates a `/optimized` and `/build` set of SVG and JavaScript code, based on `/source` SVG images.
 
 ## Attributes
+
+[Back to Top](#sections)
 
 | Attribute | Description | Values (DEFAULT) |
 |-----------|-------------|------------------|
@@ -133,6 +145,8 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 | path | Used with "external" | path to the file |
 
 ## Task List
+
+[Back to Top](#sections)
 
 - [x] Web Component (JavaScript ONLY)
 - [x] Accept Attribute Changes
