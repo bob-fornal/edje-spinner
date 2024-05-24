@@ -174,5 +174,13 @@ This script generates a `/optimized` and `/build` set of SVG and JavaScript code
 
 These are sites I've been using ...
 
+### Reference
+
+* [MDN: Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+* [MDN: Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
+* [CSS Tricks: Styling a Web Component](https://css-tricks.com/styling-a-web-component/)
+
+### Images
+
 * [PNG to SVG Converted](https://svgconverter.app/free)
 * [SVG Sanitizer / Validation](https://svg.enshrined.co.uk/)
